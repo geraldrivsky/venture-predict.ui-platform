@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700&display=swap')
+@import styles/global/_colors
+@import styles/index
+html, body, #root
+  height: 100%
+  width: 100%
+
+html
+  font-size: 1rem
+  line-height: 1.25
+  font-weight: 600
+  color: $VP_DARK
+  font-family: -apple-system, BlinkMacSystemFont, 'Titillium Web', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+  
+  @media screen and (min-width: 820px)
+    font-size: 1.15rem
+
+#root
+  display: flex
+
+body
+  margin: 0
+  padding: 0
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+img
+  display: flex
+  font-size: 0.5rem
+
+h1, h2, h3
+  font: inherit
+  margin: 0
+  letter-spacing: 1.2px
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12)
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+p
+  letter-spacing: 1px
+  margin: 0
+
+a
+  text-decoration: none
+  color: inherit
+
+.p-s-13 
+  font-size: 0.8125rem
+
+  &_bold
+    font-weight: bold
+  
+  &_pale
+    opacity: 0.3
+
+  &_dark
+    color: $VP_DARK
+
+  &_case_upper
+    text-transform: uppercase
+  
+button
+  outline-style: none
+  padding: 0
+  background: none
+  border: none
+  font: inherit
+  display: flex
+  cursor: pointer
+
+.p-fz-9
+  font-size: 0.5625rem
+
+.p-fz-11
+  font-size: 0.6875rem
+
+.p-fz-13
+  font-size: 0.8125rem
+  
+.p-fz-14
+  font-size: 0.875rem
+
+.p-fz-42
+  font-size: 2.625rem
+  line-height: 1
+
+.p-m-15-sb
+  font-size: 0.9375rem
+  font-weight: bold
+  color: #fff
+
+.p-xs-8
+  font-size: 0.5rem
+  text-transform: uppercase
+  color: #454545
+  opacity: 0.3
+
+.h3-19-sb
+  text-transform: uppercase
+  font-size: 1.1875rem
+
+.h2-24-light
+  font-size: 1.5rem
+  font-weight: 300
+  
+.h1-32-light
+  font-size: 2rem
+  font-weight: 300
+  
+.p-xs-11
+  font-size: 0.6875rem
+  color: #333333
+
+.take-up-full
+  width: 100%
+  height: 100%
+  box-sizing: border-box
+
+sup
+  font-size: inherit
+
+.nav__item
+  font-size: 0.625rem
+
+input
+  border-style: none
+  padding: 0
+  outline-style: none
+  font: inherit
+
+
+
+code
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
+
+::-webkit-scrollbar
+  width: 5px
+
+::-webkit-scrollbar-thumb
+  border-radius: 10px

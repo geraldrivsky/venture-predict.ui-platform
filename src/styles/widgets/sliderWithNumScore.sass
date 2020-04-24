@@ -1,0 +1,28 @@
+@import ../global/_colors
+
+.slider-with-num-score
+  display: flex
+  align-items: center
+  line-height: 1
+  padding: 5px 10px
+
+  &__text
+    white-space: nowrap
+    text-transform: uppercase
+    margin-right: auto
+
+  &__slider
+    margin-right: 10px
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12)
+
+  &_with-background
+    background-color: rgba($VP_SILVER, 0.3)
+    border-radius: 25px
+    
+    &::before
+      content: ''
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background-color: white
+      margin-right: 10px

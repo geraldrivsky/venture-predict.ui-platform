@@ -1,0 +1,79 @@
+.market-problem-page
+  position: relative  
+  flex: auto
+  padding: 65px 30px 70px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  color: white
+  font-size: 0.9375rem
+  line-height: 1.5
+
+  @media screen and ( min-width: 640px )
+    font-size: 0.8125rem
+    padding: 0 55px
+    display: grid
+    align-content: center
+    grid-template-columns: minmax(11.6rem, 17.5rem) minmax(25px, 90px) 18.125rem
+    grid-template-rows: auto min-content auto
+    justify-content: center
+
+  &__startup-state-circle
+    display: none
+    position: absolute
+    bottom: 0
+    transform: translate(-50%, -135px)
+
+    @media screen and ( min-width: 640px )
+      display: initial
+
+  &__graph
+    display: none
+    height: 210px
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+
+    @media screen and ( min-width: 640px )
+      display: initial
+
+  &__righted
+    grid-column-end: -1
+
+  &__slider-with-num-score
+    margin: 0 auto auto
+
+    @media screen and ( min-width: 640px )
+      margin: 0
+      align-self: center
+
+  &__problem-description
+    height: 170px
+
+    @media screen and ( min-width: 640px )
+      height: auto
+
+  &__problem-score-label
+    display: none
+    
+    @media screen and ( min-width: 640px )
+      display: initial
+      align-self: end
+
+  &__problem-introduction
+    margin-bottom: 90px
+    
+    @media screen and ( min-width: 640px )
+      margin-bottom: 0
+      display: flex
+      flex-direction: column
+      justify-content: center
+      text-align: center
+      padding: 30px
+      border-radius: 33px
+      background-color: rgba($VP_SUPER_LIGHT_GREY, 0.2)
+      height: 245px
+      box-sizing: border-box
+      grid-row: 1 / -1
+

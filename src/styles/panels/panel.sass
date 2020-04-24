@@ -1,0 +1,38 @@
+@import ../global/_colors
+
+.panel
+  background-color: $VP_SILVER
+  border-radius: 30px
+  box-shadow: 0px 4px 25px rgba($VP_SILVER, 32%)
+  width: 100%
+  display: grid
+  grid-template-rows: 100%
+
+  @media screen and ( min-width: 640px )
+    padding: 0.9375rem
+
+  @media screen and (min-width: 820px)
+    margin: 1.40625rem
+    box-shadow: 14px 14px 25px rgba(55,55,55,.48)
+
+  @media screen and (min-width: 1320px)
+    grid-template-columns: minmax(400px, 500px) auto
+    grid-column-gap: 0.9375rem
+
+  & > :last-of-type
+    display: none
+  
+    @media screen and (min-width: 1320px)
+      display: flex
+      height: 100%
+  
+  &_showed_startup
+    & > :first-of-type
+      display: none
+
+      @media screen and (min-width: 1320px)
+        display: flex
+
+    & > :last-of-type
+      display: flex
+

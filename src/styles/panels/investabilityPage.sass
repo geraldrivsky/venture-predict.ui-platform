@@ -1,0 +1,205 @@
+@import ../global/_colors
+
+@mixin text()
+  letter-spacing: normal
+  font-size: 0.8125rem
+  color: $VP_BRIGHT_GREY_TEXT
+
+  @media screen and ( min-width: 640px )
+    color: white
+    text-align: center
+    letter-spacing: 2px
+
+@mixin decor($height)
+  &::after
+    content: ''
+    width: 1px
+    height: $height
+    background-color: $VP_GREEN
+    border-radius: 1px
+    position: absolute
+    left: 50%
+    top: 100%
+    transform: translateX(-50%)
+
+  &::before
+    content: ''
+    width: 3px
+    height: 3px
+    border-radius: 50%
+    position: absolute
+    left: 50%
+    bottom: -$height - 3px
+    transform: translateX(-50%)
+    background-color: $VP_GREEN
+
+
+.investability-page
+  display: flex
+  justify-content: center
+  align-items: center
+  flex: auto
+  padding: 60px 55px 110px
+
+  @media screen and ( min-width: 640px )
+    flex-direction: column
+    padding: 25px 35px 50px
+
+  &__investability-main-score
+    margin-bottom: 25px
+
+    @media screen and ( min-width: 640px )
+      margin-bottom: 0
+
+  &__svg
+    background: url(../../assets/svgs/investability-connecting-lines.svg) no-repeat
+    align-self: flex-end
+    width: 80px
+    height: calc(100% - 1.75rem)
+
+    @media screen and ( min-width: 640px )
+      width: calc(100% - 5.8rem)
+      height: 97px
+      align-self: initial
+      background-image: url(../../assets/svgs/investability-connecting-lines-desktop.svg)
+
+  &__category-performance
+    align-self: stretch
+  
+.category-performance
+  padding: 10px 65px 10px 25px
+  display: none
+  justify-content: space-between
+  align-items: center
+  border-radius: 27px
+  color: rgba(white, 0.5)
+  letter-spacing: 1px
+  background-color: rgba($VP_ULTRA_DARK, 0.21)
+
+  @media screen and ( min-width: 640px )
+    display: flex
+
+  &__span
+    max-width: 6.75rem
+    font-size: 0.8125rem
+    text-align: right
+
+  &__list
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__item
+    display: flex
+    align-items: center
+    font-size: 0.625rem
+
+    &::before
+      content: ''
+      display: inline-block
+      width: 12px
+      height: 12px
+      border-radius: 50%
+      margin-right: 15px
+      background-color: $VP_SCORE_YELLOW
+
+    &:first-of-type::before
+      background-color: $VP_GREEN
+
+    &:last-of-type::before
+      background-color: $VP_RED
+      
+  
+.investability-scores
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  
+  @media screen and ( min-width: 640px )
+    flex-direction: initial
+    height: initial
+    align-self: stretch
+
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    @media screen and ( min-width: 640px )
+      width: 110px
+
+  &__w
+    display: none
+    font-size: 0.6875rem
+    margin-bottom: 20px
+    text-align: center
+    line-height: 35px
+    width: 35px
+    height: 35px
+    border-radius: 50%
+    background-color: rgba($VP_ULTRA_DARK, 0.3)
+    position: relative
+    @include decor(13px)
+
+    @media screen and ( min-width: 640px )
+      display: initial
+
+    & span
+      color: rgba($VP_GREY, 0.3)
+
+  &__capsules
+    margin-bottom: 20px
+    margin-top: 15px
+    display: none
+    height: 60px
+    justify-content: space-between
+    flex-direction: column
+
+    @media screen and ( min-width: 640px )
+      display: flex
+
+  &__capsule
+    width: 25px
+    height: 10px
+    background-color: $VP_ULTRA_DARK
+    border-radius: 23px
+    opacity: 0.2
+
+    &:first-child
+      opacity: 0.3
+    
+    &:last-of-type
+      opacity: 0.1
+
+  
+  &__text
+    margin-bottom: 10px
+    text-align: center
+    white-space: nowrap
+    @include text
+
+  &__num-score
+    position: relative
+    @include decor(5px)
+
+.investability-main-score
+  width: 85px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  &__text
+    margin-bottom: 5px
+    @include text
+
+    @media screen and ( min-width: 640px )
+      line-height: 1
+      margin-bottom: 20px
+    
+  &__slider
+    margin-bottom: 10px
+
+    @media screen and ( min-width: 640px )
+      display: none

@@ -1,0 +1,171 @@
+@import ../global/_colors
+
+.dashboard-page
+  padding-top: 35px
+  display: flex
+  flex: auto
+  flex-direction: column
+  align-items: center
+  overflow-y: auto
+
+  @media screen and ( min-width: 640px )
+    padding-top: 65px
+
+  &__dashboard-page-feedback
+    margin-bottom: 50px
+
+    @media screen and ( max-width: 640px )
+      margin-bottom: 105px
+
+.dashboard-page-feedback
+  width: 605px
+  display: flex
+  justify-content: space-between
+  align-items: center
+    
+
+  @media screen and ( max-width: 640px )
+    width: 250px
+
+  &__item
+    display: flex
+    align-items: center
+
+    @media screen and ( max-width: 640px )
+      text-align: center
+      flex-direction: column
+      height: 85px
+      justify-content: space-between
+
+  &__svg
+    margin-right: 10px
+
+    @media screen and ( max-width: 640px )
+      margin-right: 0
+      margin-bottom: 10px
+
+  &__text
+    @media screen and ( max-width: 640px )
+      display: inline-block
+      margin-top: 5px
+      opacity: 0.5
+
+
+.startup-score-state
+  position: relative
+  height: 210px
+  margin-top: auto
+  align-self: stretch
+  display: flex
+  justify-content: space-around
+  padding-bottom: 20px
+  box-sizing: border-box
+
+  @media screen and ( max-width: 640px )
+    height: 195px
+    padding-bottom: 88px
+
+  &__graph
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    opacity: 0.1
+
+    & svg
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+
+      &:first-child
+        display: none
+
+      @media screen and ( min-width: 640px )
+        &:first-child
+          display: initial
+
+        &:last-child
+          display: none
+      
+
+  &__startup-score-state-visualiser
+    position: absolute
+    bottom: 130px
+    left: 10%
+
+  &__item
+    display: flex
+    align-items: flex-end
+    position: relative
+    max-width: 110px
+    text-align: center
+    font-size: 0.75rem
+    opacity: 0.5
+    letter-spacing: 1.5px
+    color: $VP_GREY
+
+    @media screen and ( max-width: 640px )
+      visibility: hidden
+
+    &_active
+      color: #fff
+      opacity: 1
+
+      @media screen and ( max-width: 640px )
+        visibility: visible
+        color: $VP_GREY
+        opacity: 0.5
+        
+
+    &::after
+      content: ""
+      position: absolute
+      left: 50%
+      bottom: -20px
+      width: 2px
+      height: 5px
+      background-color: #fff
+      transform: translateX(-50%)
+      
+.startup-score-state-visualiser
+  color: #ffffff
+  font-weight: bold
+  letter-spacing: 0.3px
+  transform: translateX(calc(-100% - 25px))
+
+  &__score
+    font-size: 1rem
+
+  &__full-score
+    font-size: 0.8083rem
+    opacity: 0.5
+
+  &__startup-state-circle
+    position: absolute
+    top: 5px
+    left: calc(100% + 25px)
+    transform: translate(-50%, 50%)
+
+.startup-state-circle
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    background-color: $VP_TURQUOISE
+    box-shadow: 0 0 0 4px rgba(0, 228, 119, 0.6), 0 0 0 10px rgba(#c2c2c2, 0.2)
+
+    &::after
+      content: ''
+      left: 50%
+      top: calc(100% + 10px)
+      transform: translateX(-50%)
+      position: absolute
+      width: 2px
+      height: 125px
+      background-color: $VP_GREEN
+      opacity: 0.3
+
+      @media screen and ( max-width: 640px )
+        // display: none

@@ -1,0 +1,268 @@
+@import ../global/_colors
+@import ../global/_breakPoints
+
+.startup-wrapper
+  position: relative
+  display: flex
+  flex-direction: column
+
+  &__slider
+    @media screen and ( max-width: 640px )
+      margin-bottom: -2px
+
+  &__loading
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.startup-wrapper-top
+  display: flex
+  align-items: center 
+  padding: 15px 15px 0
+  color: rgba($VP_DARK, 0.5)
+  letter-spacing: 1.2px
+
+  @media screen and ( min-width: 640px )
+    color: $VP_GREY
+    padding:
+      top: 20px
+      left: 25px
+      right: 25px
+
+  &__drop-down-list
+    position: relative
+    width: 20px
+    height: 11px
+    margin-top: 3px
+    align-self: start
+    opacity: 0.5
+
+    @media screen and ( min-width: 640px )
+      margin-top: 0
+      opacity: 0.3
+      height: 14px
+      align-self: initial
+      margin: 
+        right: auto
+      
+    &::after, &::before
+      position: absolute
+      content: ""
+      width: 3px
+      height: 100%
+      background-color: $VP_DARK
+      border-radius: 20%
+      top: 0
+      left: 50%
+      transform-origin: bottom center
+
+      @media screen and ( min-width: 640px )
+        background-color: $VP_GREY
+
+
+    &::after
+      transform: translateX(calc(-50% + 1px)) rotate(-45deg)
+
+    &::before
+      transform: translateX(calc(-50% - 1px)) rotate(45deg)
+
+  &__page-name
+    font-size: 1.5rem
+    margin:
+      right: auto
+      left: auto
+
+    @media screen and ( min-width: 640px )
+      font-size: 1.1875rem
+      margin-left: initial
+
+  &__page-counter-container
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    margin-right: 5px
+    margin-left: -35px
+
+    @media screen and ( min-width: 640px )
+      margin-left: initial
+      order: -1
+      opacity: 1
+
+  &__page-counter
+    font-size: 0.75rem
+    line-height: 1
+
+    @media screen and ( min-width: 640px )
+      font-size: 1.1875rem
+      
+
+  &__app-view-context
+    font-size: 0.5rem
+    text-transform: uppercase
+
+    @media screen and ( min-width: 640px )
+      display: none
+
+  &__close-btn
+    position: relative
+    width: 17px
+    height: 17px
+    opacity: 0.2
+
+    @media screen and ( min-width: 640px )
+      opacity: 1
+      order: 1
+    
+    &::after, &::before
+      content: ""
+      position: absolute
+      top: 50%
+      left: -2px
+      width: 22px
+      height: 3px
+      border-radius: 20%
+      background-color: $VP_ULTRA_DARK
+
+      @media screen and ( min-width: 640px )
+        background-color: $VP_GREY
+
+    &::after
+      transform: translateY(-50%) rotate(45deg)
+    
+    &::before
+      transform: translateY(-50%) rotate(-45deg)
+  
+  &_light
+    color: rgba(white, 0.5)
+
+    @media screen and ( min-width: 640px )
+      color: $VP_GREY
+
+    .startup-wrapper-top__drop-down-list
+      &::after, &::before
+        background-color: white
+
+        @media screen and ( min-width: 640px )
+          background-color: $VP_GREY
+
+    .startup-wrapper-top__close-btn
+      &::after, &::before
+        background-color: $VP_SUPER_LIGHT_GREY
+
+        @media screen and ( min-width: 640px )
+          background-color: $VP_GREY
+
+  &_light-dark
+    color: rgba(white, 0.5)
+
+    @media screen and ( min-width: 640px )
+      color: $VP_GREY
+
+    .startup-wrapper-top__page-name
+      color: white
+
+      @media screen and ( min-width: 640px )
+        color: $VP_GREY
+
+
+    .startup-wrapper-top__drop-down-list
+      &::after, &::before
+        background-color: white
+
+        @media screen and ( min-width: 640px )
+          background-color: $VP_GREY
+
+    .startup-wrapper-top__close-btn
+      &::after, &::before
+        background-color: $VP_SUPER_LIGHT_GREY
+
+        @media screen and ( min-width: 640px )
+          background-color: $VP_GREY
+
+  &_white
+    color: rgba(white, 0.5)
+
+    @media screen and ( min-width: 640px )
+      color: white
+
+    .startup-wrapper-top__page-name
+      color: white
+
+
+    .startup-wrapper-top__drop-down-list
+      &::after, &::before
+        background-color: white
+
+    .startup-wrapper-top__close-btn
+      &::after, &::before
+        background-color: $VP_SUPER_LIGHT_GREY
+
+        @media screen and ( min-width: 640px )
+          background-color: white
+
+.startup-wrapper-bottom
+  padding: 10px 40px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  box-sizing: border-box
+  background-color: #fff
+
+  @media screen and ( max-width: 640px )
+    position: absolute
+    bottom: 10px
+    left: 10px
+    right: 10px
+    border-radius: 16px
+    box-shadow: 0px -4px 32px rgba(0, 0, 0, 0.12)
+    z-index: 1
+    padding: 
+      left: 15px
+      right: 15px
+    
+  &__management
+    align-self: flex-end
+    display: flex
+    flex-direction: column
+    align-items: center
+    
+  &__management-text
+    margin-top: 5px
+    font-size: 0.625rem
+    letter-spacing: 0.5px
+    color: $VP_DARK
+    opacity: 0.4
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12)
+
+  &__left-arrow, &__right-arrow
+    position: relative
+    width: 10px
+    height: 20px
+
+    &::before, &::after
+      content: ""
+      position: absolute
+      left: 0
+      width: 14px
+      height: 3px
+      background-color: $VP_GREY
+      border-radius: 5px
+
+  &__left-arrow
+    &::after
+      top: 25%
+      transform: translateY(calc(-50% + 1px)) rotate(-45deg)
+
+    &::before
+      top: 75%
+      transform: translateY(calc(-50% - 1px)) rotate(45deg)
+
+  &__right-arrow
+    &::after
+      top: 25%
+      transform: translateY(calc(-50% + 1px)) rotate(45deg)
+
+    &::before
+      top: 75%
+      transform: translateY(calc(-50% - 1px)) rotate(-45deg)

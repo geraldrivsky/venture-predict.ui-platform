@@ -1,0 +1,47 @@
+@import ../global/_colors
+
+.default-info-page-content
+  display: grid
+  grid-template-columns: repeat(3, minmax(min-content, 1fr))
+  grid-template-rows: 1fr min-content 1fr
+  height: 100%
+  line-height: 1.5
+  padding: 30px 60px
+  box-sizing: border-box
+  align-items: center
+  letter-spacing: 1.2px
+  color: rgba($VP_TURQUOISE, 0.8)
+  background-image: linear-gradient(0.16deg, #6D5ECE 16.64%, #063944 105.94%)
+
+  @media screen and ( min-width: 1320px )
+    padding: 45px 90px
+
+  &__left
+    justify-self: left
+
+  &__middle
+    justify-self: center
+
+  &__right
+    justify-self: right
+
+  &__top
+    align-self: start
+
+  &__bottom
+    align-self: end
+
+  &__pale
+    opacity: 0.7
+
+  &__paler
+    opacity: 0.5
+
+  &__positioned
+    position: relative
+    top: 50%
+
+  &__count
+    display: inline-flex
+    flex-direction: column
+    align-items: center

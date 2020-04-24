@@ -1,0 +1,230 @@
+@import ../global/_colors
+
+.market-type-page
+  position: relative
+  flex: auto
+  padding: 50px 65px 70px
+  color: white
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+
+  @media screen and ( min-width: 640px )
+    flex-direction: row
+    padding: 0 55px
+    justify-content: center
+    
+  &__startup-state-circle
+    display: none
+    position: absolute
+    bottom: 0
+    transform: translate(-50%, -135px)
+
+    @media screen and ( min-width: 640px )
+      display: initial
+
+  &__graph
+    display: none
+    height: 210px
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+
+    @media screen and ( min-width: 640px )
+      display: initial
+
+  &__customer-type-desc
+    min-height: 200px
+    font-size: 0.9375rem
+    margin-top: 120px
+
+    @media screen and ( min-width: 640px )
+      order: -1
+      text-align: center
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 0 30px
+      border-radius: 33px
+      background-color: rgba($VP_SUPER_LIGHT_GREY, 0.2)
+      min-height: 245px
+      margin-right: 30px
+      max-width: 280px
+      margin-top: 0
+
+
+.market-type-schema
+  display: flex
+  margin-top: auto
+  margin-bottom: auto
+
+  @media screen and ( min-width: 640px )
+    align-items: center
+
+  &__items
+    display: inline-block
+    margin-right: 35px
+
+    @media screen and ( min-width: 640px )
+      margin-right: 70px
+    
+  &__item
+    
+    &:first-child
+      margin-bottom: 10px
+
+    &:nth-child(2)
+      margin-bottom: 15px
+
+    &:last-child
+      max-width: 3.75rem
+
+      @media screen and ( min-width: 640px )
+        max-width: initial
+        white-space: nowrap
+
+    @media screen and ( min-width: 640px )
+      &:not(:last-child)
+        margin-bottom: 30px
+  
+  &__text
+    line-height: 1.5
+
+    &:not(:last-child)
+      margin-bottom: 10px
+
+      @media screen and ( min-width: 640px )
+        margin-bottom: 30px
+
+    &:not(:first-child)
+      margin-left: 10px
+
+  &__diagram
+    margin-top: -30px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__diagram-decor
+    display: flex
+    opacity: 0.7
+    align-items: center
+    position: absolute
+
+  &__diagram-decor-circle
+    width: 3px
+    height: 3px
+    border-radius: 50%
+    background-color: white
+
+  &__diagram-decor-line
+    height: 1px
+    width: 45px
+    background-color: white
+    border-radius: 1px
+
+    @media screen and ( min-width: 640px )
+      width: 70px
+
+  &__technology-decor-line
+    height: 1px
+    width: 7px
+    border-radius: 1px
+    transform-origin: center left
+    transform: rotate(45deg)
+    background-color: white
+
+  &__customer-type-decor-line
+    height: 1px
+    width: 11px
+    border-radius: 1px
+    transform-origin: center left
+    transform: rotate(-45deg)
+    background-color: white
+
+  &__technology-diagram-decor
+    left: -46%
+    top: 66%
+    transform: rotate(-45deg) translate(-50%, -50%)
+
+
+  &__industry-diagram-decor
+    left: -16%
+    top: 96%
+    transform: rotate(-45deg) translate(-50%, -50%)
+    
+
+  &___customer-type-diagram-decor
+    left: -87%
+    top: 163%
+
+    @media screen and ( min-width: 640px )
+      left: -97%
+      top: 123%
+
+  &__technology-diagram-decor .market-type-schema__diagram-decor-line
+    width: 60px
+
+    @media screen and ( min-width: 640px )
+      width: 95px
+  
+  &__technology
+    position: relative
+    bottom: -40px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    width: 75px
+    height: 75px
+    background: rgba(#FFFFFF, 0.78)
+    box-shadow: 0px 15px 14px rgba(69, 69, 69, 0.2)
+    z-index: 1
+    border-radius: 16px
+    transform: rotate(45deg)
+
+    @media screen and ( min-width: 640px )
+      bottom: -60px
+      width: 115px
+      height: 115px
+      border-radius: 21px
+
+
+    & p
+      transform: rotate(-45deg)
+
+  &__industry
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    width: 115px
+    height: 115px
+    border-radius: 15px
+    background: rgba($GRAY_4, 0.6)
+    box-shadow: 0px 15px 14px rgba(69, 69, 69, 0.2)
+    transform: rotate(45deg)
+
+    @media screen and ( min-width: 640px )
+      width: 185px
+      height: 185px
+      border-radius: 25px
+
+    & p
+      transform: rotate(-45deg)
+
+  &__customer-type
+    position: relative
+    bottom: 17px
+    padding: 0 7px
+    z-index: 1
+    display: inline-block
+    background-color: rgba($VP_SILVER, 0.3)
+    border-radius: 25px
+
+    @media screen and ( min-width: 640px )
+      bottom: 30px
+      padding: 5px 15px

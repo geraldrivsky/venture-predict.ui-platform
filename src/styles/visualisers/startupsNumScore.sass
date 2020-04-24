@@ -1,0 +1,26 @@
+@import ../global/_colors
+
+.startups-num-score
+  white-space: nowrap
+  font-size: 0.5rem
+  letter-spacing: 1px
+  border-radius: 8px
+  padding: 0 12px
+  height: 1.4625rem
+  line-height: 1.4625rem
+  background-color: rgba(#E1E1E1, 0.2)
+
+  &_value_small
+    .startups-num-score__current-value
+      color: $VP_SCORE_RED
+  
+  &_value_middle
+    .startups-num-score__current-value
+      color: $VP_SCORE_YELLOW
+  
+  &_value_big
+    .startups-num-score__current-value
+      color: $VP_GREEN
+
+  &__max-value
+    color: $VP_GREY

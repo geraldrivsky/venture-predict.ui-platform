@@ -1,0 +1,32 @@
+@import ../global/_colors
+
+.top
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 10px
+
+  &__title
+    margin-right: 10px
+
+.search
+  display: flex
+  align-items: center
+
+  &__submit
+    cursor: pointer
+
+  &__input
+    width: 0
+    height: 0
+    color: $VP_DARK
+    margin-right: 5px
+
+  &_active
+    border: 1px solid rgba($VP_GREY, 0.5)
+    border-radius: 10px
+    padding: 10px
+    
+    .search__input
+      width: initial
+      height: initial
